@@ -16,7 +16,7 @@ Before setup, verify the user has what they need:
    - Windows PowerShell: `irm https://claude.ai/install.ps1 | iex`
    - Mac Homebrew: `brew install --cask claude-code`
    - Windows WinGet: `winget install Anthropic.ClaudeCode`
-   - No Node.js or npm needed — Claude Code is a native binary.
+
 
 ## First-Time Setup
 
@@ -56,4 +56,4 @@ If the user outgrows forge-user (wants hooks, automated dispatching, Rust-powere
 ## Platform Notes
 
 - **Windows**: Claude Code runs natively on Windows 10 (1809+). Requires [Git for Windows](https://git-scm.com/downloads/win) for shell operations. WSL 2 also works.
-- **Alternative tools**: forge-user works with any tool that reads `CLAUDE.md` and discovers skills from `.claude-plugin/plugin.json`. [OpenCode](https://opencode.ai) and [Codex CLI](https://github.com/openai/codex) are compatible alternatives.
+- **Other tools**: The steering files and CLAUDE.md are plain markdown — useful with any AI tool. [OpenCode](https://opencode.ai) reads CLAUDE.md as a fallback. For [Codex CLI](https://developers.openai.com/codex) (uses AGENTS.md) or [Gemini CLI](https://github.com/google-gemini/gemini-cli) (uses GEMINI.md), copy CLAUDE.md content into the tool's instruction file format. Skill slash commands only work in Claude Code.

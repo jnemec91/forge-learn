@@ -14,15 +14,19 @@ Everything here is a text file you can open, read, and edit. No magic, no hidden
 
 ## Supported Tools
 
-forge-user works with any AI coding tool that reads project markdown files:
+forge-user is built for **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — skills are auto-discovered and slash commands (`/Tour`, `/Explain`, etc.) work out of the box.
 
-| Tool | Platform | Notes |
-|------|----------|-------|
-| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Mac, Linux, Windows | Full plugin support — skills auto-discovered |
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Mac, Linux, Windows | Reads CLAUDE.md, compatible with skill files |
-| [Codex CLI](https://github.com/openai/codex) | Mac, Linux, Windows (experimental) | OpenAI's coding agent |
-| [OpenCode](https://opencode.ai) | Mac, Linux, Windows | Open-source, 75+ LLM providers |
-| [GitHub Copilot](https://github.com/features/copilot) | All platforms via IDE | Reads project instructions from markdown |
+The steering files (`steering/Identity.md`, `Goals.md`) and `CLAUDE.md` are plain markdown, so they're useful with other AI coding tools too — but skill discovery varies:
+
+| Tool | Reads CLAUDE.md | Skills as /commands | Install |
+|------|----------------|---------------------|---------|
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Yes | Yes (full plugin support) | `curl -fsSL https://claude.ai/install.sh \| bash` |
+| [OpenCode](https://opencode.ai) | Yes (fallback) | Partial (`.claude/skills/`) | `curl -fsSL https://opencode.ai/install \| bash` |
+| [Codex CLI](https://github.com/openai/codex) | No (uses AGENTS.md) | No | See [Codex docs](https://developers.openai.com/codex) |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | No (uses GEMINI.md) | No | See [Gemini CLI docs](https://github.com/google-gemini/gemini-cli) |
+| [GitHub Copilot](https://github.com/features/copilot) | No (uses .github/copilot-instructions.md) | No | Via IDE |
+
+For tools that don't read `CLAUDE.md`, you can copy the content into their instruction file format (e.g., `AGENTS.md` for Codex, `GEMINI.md` for Gemini CLI).
 
 ## What's Inside
 
@@ -41,9 +45,7 @@ modules/       ← Optional add-ons (empty for now)
 
 ## Quick Start
 
-### 1. Install an AI coding tool
-
-Pick any tool from the table above. For Claude Code:
+### 1. Install Claude Code
 
 **Mac / Linux:**
 ```bash
@@ -65,7 +67,7 @@ brew install --cask claude-code
 winget install Anthropic.ClaudeCode
 ```
 
-No Node.js or npm needed — Claude Code is a native binary.
+
 
 ### 2. Download this project
 
@@ -167,8 +169,9 @@ Clone a module into `modules/` and ask your AI to help set it up. For automated 
 ## Requirements
 
 - [Git](https://git-scm.com/downloads) — to download and manage this repository
-- Any [supported AI coding tool](#supported-tools) — Claude Code, Gemini CLI, Codex, OpenCode, or Copilot
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) — the AI tool that reads these files
 - A text editor — anything works (VS Code, Notepad, TextEdit, Sublime, vim)
+- **Windows**: Works natively on Windows 10+. See [platform setup](https://code.claude.com/docs/en/setup#platform-specific-setup) for details.
 
 ## License
 
