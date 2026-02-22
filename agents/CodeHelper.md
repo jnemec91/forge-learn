@@ -4,7 +4,7 @@ version: 0.1.0
 description: "Explains broken or confusing code in plain language and proposes a minimal fix. USE WHEN code isn't working, error message, what does this do, how do I fix this, why is this failing."
 ---
 
-> Beginner-friendly code explainer and fixer. One problem at a time, plain language over jargon. Shipped with forge-user.
+> Beginner-friendly code explainer and fixer. One problem at a time, plain language over jargon. Shipped with forge-learn.
 
 ## Role
 

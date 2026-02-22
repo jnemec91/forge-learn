@@ -1,7 +1,7 @@
-# AGENTS.md -- forge-user
+# AGENTS.md -- forge-learn
 
-> Personal AI skills and identity for beginners. 19 skills, 1 agent, covering text
-> transformation, code assistance, project scaffolding, and meta-learning.
+> Learning-focused AI skills with guided progression. 7 skills, 1 agent, covering
+> code assistance, project scaffolding, and meta-learning.
 > Multi-provider support: Claude Code, Gemini CLI, Codex, OpenCode.
 
 ## Install / Verify
@@ -16,7 +16,7 @@ make clean            # remove installed agents + skills
 ## Project Structure
 
 ```
-skills/                   19 skill directories (SKILL.md + SKILL.yaml each)
+skills/                   7 skill directories (SKILL.md + SKILL.yaml each)
 agents/
   CodeHelper.md           Starter agent for code explanation (source)
 steering/
@@ -42,22 +42,10 @@ Platform directories (`.claude/`, `.gemini/`, `.codex/`, `.opencode/`) are gener
 | **Tour** | Walk through setup, directories, and available skills |
 | **Progress** | Show current level and suggest next steps (Claude only) |
 | **Explain** | Explain any file, error, or concept in plain language |
-| **ExplainSimply** | Rewrite complex content in simple, accessible language |
 | **FixIt** | Diagnose problems and propose fixes |
 | **GitHelp** | Translate plain English into git commands |
 | **Kickstart** | Turn "I want to build X" into a plan with starter files |
 | **Summarize** | Extract key points into a structured summary |
-| **Translate** | Translate text into any target language |
-| **FixGrammar** | Fix grammar and spelling, preserve everything else |
-| **MakeLonger** | Expand text to roughly twice its length |
-| **MakeShorter** | Condense text to roughly half its length |
-| **Emojify** | Add context-appropriate emojis at natural break points |
-| **CleanText** | Strip URLs, HTML tags, and noise from text |
-| **GenerateGlossary** | Create an alphabetical glossary of key terms |
-| **GenerateOutline** | Generate a hierarchical outline from any document |
-| **RewriteAsTweet** | Rewrite content as a tweet or tweet thread |
-| **Pandoc** | Convert documents between formats via pandoc |
-| **HighImpactChanges** | Identify highest-impact changes in a codebase |
 
 ### Provider Routing
 
@@ -82,14 +70,14 @@ Each skill directory contains:
 ## Consuming as Submodule
 
 ```bash
-git submodule add https://github.com/N4M3Z/forge-user.git modules/forge-user
+git submodule add https://github.com/N4M3Z/forge-learn.git modules/forge-learn
 ```
 
 ### Makefile Integration
 
 ```makefile
-install-forge-user:
-	@$(MAKE) -C modules/forge-user install SCOPE=$(SCOPE)
+install-forge-learn:
+	@$(MAKE) -C modules/forge-learn install SCOPE=$(SCOPE)
 ```
 
 ## Configuration
@@ -100,7 +88,7 @@ install-forge-user:
 
 ## Development Conventions
 
-- **Skill naming**: PascalCase directories (`FixGrammar/`), matching `name:` in SKILL.md frontmatter
+- **Skill naming**: PascalCase directories (`FixIt/`), matching `name:` in SKILL.md frontmatter
 - **Agent naming**: PascalCase filenames (`CodeHelper.md`), matching `name:` in frontmatter
 - **Config override**: `config.yaml` (gitignored) overrides `defaults.yaml`
 - **forge-lib**: Consumed as git submodule at `lib/`, provides `install-skills`, `install-agents`, and `validate-module`

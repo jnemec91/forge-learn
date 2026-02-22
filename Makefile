@@ -1,8 +1,8 @@
-# forge-user Makefile
+# forge-learn Makefile
 
 AGENTS   = CodeHelper
 # Universal skills (deployed to all providers). Progress is Claude-only — see defaults.yaml.
-SKILLS   = CleanText Emojify Explain ExplainSimply FixGrammar FixIt GenerateGlossary GenerateOutline GitHelp HighImpactChanges Kickstart MakeLonger MakeShorter Pandoc RewriteAsTweet Summarize Tour Translate
+SKILLS   = Explain FixIt GitHelp Kickstart Summarize Tour
 AGENT_SRC = agents
 SKILL_SRC = skills
 LIB_DIR  = $(or $(FORGE_LIB),lib)
@@ -15,7 +15,7 @@ VALIDATE_MODULE ?= $(LIB_DIR)/bin/validate-module
 .PHONY: help install clean verify test lint check init
 
 help:
-	@echo "forge-user management commands:"
+	@echo "forge-learn management commands:"
 	@echo "  make install         Install agents + skills for all providers (SCOPE=workspace|user|all, default: workspace)"
 	@echo "  make install-agents  Install agents only"
 	@echo "  make install-skills  Install skills for Claude, Gemini, Codex, and OpenCode"

@@ -7,22 +7,22 @@ Instructions for the AI agent. Run these checks when the user asks to verify the
 Verify the expected files exist:
 
 ```
-.claude-plugin/plugin.json    — plugin manifest (skills discovery)
-CLAUDE.md                     — AI ground rules
-steering/Identity.md          — user identity
-steering/Goals.md             — user goals
-steering/Levels.md            — progression tracking
-skills/*/SKILL.md             — at least 19 skill files
+.claude-plugin/plugin.json    -- plugin manifest (skills discovery)
+CLAUDE.md                     -- AI ground rules
+steering/Identity.md          -- user identity
+steering/Goals.md             -- user goals
+steering/Levels.md            -- progression tracking
+skills/*/SKILL.md             -- at least 7 skill files
 ```
 
 If `.claude-plugin/plugin.json` is missing, the plugin won't load. Recreate it:
 
 ```json
 {
-  "name": "forge-user",
-  "version": "0.1.0",
-  "description": "Personal AI skills — teach your assistant who you are",
-  "skills": ["./skills"]
+    "name": "forge-learn",
+    "version": "0.2.0",
+    "description": "Learning-focused AI skills with guided progression",
+    "skills": ["./skills"]
 }
 ```
 
@@ -36,9 +36,9 @@ Read `steering/Goals.md`. If it still has the example goals ("Learn to build a p
 
 ## Check 4: Skills Discovery
 
-List the contents of `skills/`. There should be 19 skill directories, each containing a `SKILL.md`. If any are missing, report which ones.
+List the contents of `skills/`. There should be 7 skill directories, each containing a `SKILL.md`. If any are missing, report which ones.
 
-Expected skills: CleanText, Emojify, Explain, ExplainSimply, FixGrammar, FixIt, GenerateGlossary, GenerateOutline, GitHelp, HighImpactChanges, Kickstart, MakeLonger, MakeShorter, Pandoc, Progress, RewriteAsTweet, Summarize, Tour, Translate.
+Expected skills: Explain, FixIt, GitHelp, Kickstart, Progress, Summarize, Tour.
 
 ## Check 5: Agent Available
 

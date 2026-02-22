@@ -1,84 +1,36 @@
 skills:
     claude:
-        CleanText:
-        Emojify:
         Explain:
-        ExplainSimply:
-        FixGrammar:
         FixIt:
-        GenerateGlossary:
-        GenerateOutline:
         GitHelp:
-        HighImpactChanges:
         Kickstart:
-        MakeLonger:
-        MakeShorter:
-        Pandoc:
         Progress:
-        RewriteAsTweet:
         Summarize:
         Tour:
-        Translate:
 
     gemini:
-        CleanText:
-        Emojify:
         Explain:
-        ExplainSimply:
-        FixGrammar:
         FixIt:
-        GenerateGlossary:
-        GenerateOutline:
         GitHelp:
-        HighImpactChanges:
         Kickstart:
-        MakeLonger:
-        MakeShorter:
-        Pandoc:
-        RewriteAsTweet:
         Summarize:
         Tour:
-        Translate:
 
     codex:
-        CleanText:
-        Emojify:
         Explain:
-        ExplainSimply:
-        FixGrammar:
         FixIt:
-        GenerateGlossary:
-        GenerateOutline:
         GitHelp:
-        HighImpactChanges:
         Kickstart:
-        MakeLonger:
-        MakeShorter:
-        Pandoc:
-        RewriteAsTweet:
         Summarize:
         Tour:
-        Translate:
 
     opencode:
-        CleanText:
-        Emojify:
         Explain:
-        ExplainSimply:
-        FixGrammar:
         FixIt:
-        GenerateGlossary:
-        GenerateOutline:
         GitHelp:
-        HighImpactChanges:
         Kickstart:
-        MakeLonger:
-        MakeShorter:
-        Pandoc:
-        RewriteAsTweet:
         Summarize:
         Tour:
-        Translate:
 
 agents:
     CodeHelper:

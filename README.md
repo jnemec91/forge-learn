@@ -1,6 +1,6 @@
-# forge-user
+# forge-learn
 
-A set of plain text files that teach your AI assistant who you are.
+Learn to customize your AI by editing text files.
 
 You edit a file. The AI reads it. That's all that happens.
 
@@ -8,13 +8,13 @@ You edit a file. The AI reads it. That's all that happens.
 
 When you use an AI coding tool like [Claude Code](https://claude.ai/code), every conversation starts from scratch — the AI doesn't know your name, your preferences, or what you're working on. You repeat yourself every session.
 
-**forge-user fixes that.** It's a collection of plain text files that your AI reads automatically. You tell it who you are once, and it remembers. You add skills — small instruction files — and it learns new abilities.
+**forge-learn fixes that.** It's a collection of plain text files that your AI reads automatically. You tell it who you are once, and it remembers. You add skills — small instruction files — and it learns new abilities.
 
 Everything here is a text file you can open, read, and edit. No magic, no hidden configuration, no compilation. If you can edit a document, you can customize your AI.
 
 ## Supported Tools
 
-forge-user is built for **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — skills are auto-discovered and slash commands (`/Tour`, `/Explain`, etc.) work out of the box.
+forge-learn is built for **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — skills are auto-discovered and slash commands (`/Tour`, `/Explain`, etc.) work out of the box.
 
 The steering files (`steering/Identity.md`, `Goals.md`) and `CLAUDE.md` are plain markdown, so they're useful with other AI coding tools too — but skill discovery varies:
 
@@ -31,10 +31,10 @@ For tools that don't read `CLAUDE.md`, you can copy the content into their instr
 ## What's Inside
 
 ```
-steering/      ← Who you are and what you care about
-skills/        ← What your AI can do (commands you can run)
-agents/        ← AI personas (e.g., CodeHelper)
-modules/       ← Optional add-ons (empty for now)
+steering/      <- Who you are and what you care about
+skills/        <- What your AI can do (commands you can run)
+agents/        <- AI personas (e.g., CodeHelper)
+modules/       <- Optional add-ons (empty for now)
 ```
 
 **Steering** is your identity. Open `steering/Identity.md`, change the name to yours, and save. Next session, your AI greets you by name.
@@ -67,18 +67,16 @@ brew install --cask claude-code
 winget install Anthropic.ClaudeCode
 ```
 
-
-
 ### 2. Download this project
 
 Open a terminal (Mac: Terminal app, Windows: PowerShell or Git Bash) and paste:
 
 ```bash
-git clone https://github.com/N4M3Z/forge-user.git
-cd forge-user
+git clone https://github.com/N4M3Z/forge-learn.git
+cd forge-learn
 ```
 
-This creates a `forge-user` directory on your computer and moves into it.
+This creates a `forge-learn` directory on your computer and moves into it.
 
 > **Don't have Git?** Mac: type `git --version` in Terminal and macOS will prompt you to install it. Windows: download from [git-scm.com](https://git-scm.com/downloads/win).
 
@@ -88,7 +86,7 @@ Open `steering/Identity.md` in any text editor (VS Code, Notepad, TextEdit — a
 
 ### 4. Start your AI tool
 
-From inside the `forge-user` directory:
+From inside the `forge-learn` directory:
 
 ```bash
 claude
@@ -107,32 +105,22 @@ That's it. You're set up.
 | `/Tour` | Walks you through your setup and available skills |
 | `/Progress` | Shows your current level and suggests what to try next |
 | `/Explain` | Explains any file, error, or concept in plain language |
-| `/ExplainSimply` | Rewrites complex content in simple, accessible language |
 | `/FixIt` | Diagnoses problems and proposes fixes |
 | `/GitHelp` | Translates plain English into git commands |
 | `/Kickstart` | Turns "I want to build X" into a plan with starter files |
 | `/Summarize` | Extracts key points into a structured summary |
-| `/Translate` | Translates text into any target language |
-| `/FixGrammar` | Fixes grammar and spelling, preserves everything else |
-| `/MakeLonger` | Expands text to roughly twice its length |
-| `/MakeShorter` | Condenses text to roughly half its length |
-| `/Emojify` | Adds context-appropriate emojis at natural break points |
-| `/CleanText` | Strips URLs, HTML tags, and other noise from text |
-| `/GenerateGlossary` | Creates an alphabetical glossary of key terms |
-| `/GenerateOutline` | Generates a hierarchical outline from any document |
-| `/RewriteAsTweet` | Rewrites content as a tweet or tweet thread |
 
 ## Learning Path
 
-forge-user has a 7-level progression from first prompt to ecosystem contributor. Type `/Progress` anytime to see where you are and what to try next.
+forge-learn has a 7-level progression from your first skill modification to ecosystem contributor. Type `/Progress` anytime to see where you are and what to try next.
 
 | Level | Name | What you learn |
 |-------|------|---------------|
-| 1 | Spark | Transform text — summarize, translate, simplify |
-| 2 | Shape | Personalize your AI — it learns who you are |
+| 1 | Discover | Run a skill, read its source, change one line |
+| 2 | Personalize | Edit identity files, see the AI adapt to you |
 | 3 | Navigate | Work with files and save your progress |
 | 4 | Build | Create projects from ideas |
-| 5 | Steer | Write custom rules, skills, and agents |
+| 5 | Author | Write custom rules, skills, and agents |
 | 6 | Connect | Expand with optional modules |
 | 7 | Forge | Contribute improvements to the ecosystem |
 
@@ -156,10 +144,11 @@ The `steering/` files are yours to edit with personal information (your name, go
 
 ## Want More?
 
-Once you're comfortable, you can expand your setup with optional modules:
+Once you're comfortable, expand your setup with optional modules:
 
 | Module | What it adds |
 |--------|-------------|
+| [forge-text](https://github.com/N4M3Z/forge-text) | 12 text processing skills — translate, simplify, grammar fix, expand, condense, and more |
 | [forge-council](https://github.com/N4M3Z/forge-council) | Multi-specialist code review — a panel of experts debates your changes |
 | [forge-avatar](https://github.com/N4M3Z/forge-avatar) | Deep identity — digital avatar, beliefs, strategies, communication preferences |
 | [forge-steering](https://github.com/N4M3Z/forge-steering) | Behavioral rules — teach your AI what to do and what to avoid |

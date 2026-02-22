@@ -1,10 +1,10 @@
 # Copilot Instructions
 
-forge-user is a beginner-friendly personal AI setup module. It provides 19 skills, 1 agent, identity steering files, and a 7-level progression system.
+forge-learn is a learning-focused personal AI setup module. It provides 7 skills, 1 agent, identity steering files, and a 7-level progression system.
 
 ## Structure
 
-- `skills/` -- 19 skill directories, each with SKILL.md (instructions) and SKILL.yaml (sidecar metadata)
+- `skills/` -- 7 skill directories, each with SKILL.md (instructions) and SKILL.yaml (sidecar metadata)
 - `agents/` -- Agent source files (CodeHelper.md)
 - `steering/` -- User identity (Identity.md), goals (Goals.md), progression (Levels.md)
 - `defaults.yaml` -- Skill roster, agent config, provider model mapping

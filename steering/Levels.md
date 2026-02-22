@@ -6,19 +6,19 @@ All skills work at every level — the levels guide your learning, not restrict 
 
 ---
 
-## Level 1: Spark — Transform text with prompts
+## Level 1: Discover — Run a skill, read its source, change one line
 
-Paste text in, get transformed text back. No setup needed.
+Every skill is a text file. Run one, then open the file and see how it works.
 
-**Skills**: /ExplainSimply, /Summarize, /FixGrammar, /MakeShorter, /MakeLonger, /Translate, /Emojify, /CleanText, /GenerateGlossary
+**Skills**: /Explain
 
-- [ ] Ran /ExplainSimply or /Summarize on a piece of text
-- [ ] Tried a second text-transform skill (any from the list above)
-- [ ] Used a third different text-transform skill
+- [ ] Ran /Explain on any file in the project
+- [ ] Opened `skills/Explain/SKILL.md` and read the instructions
+- [ ] Changed one line (e.g., the explanation style), re-ran, and saw the behavior change
 
 ---
 
-## Level 2: Shape — Personalize your AI
+## Level 2: Personalize — Edit identity files, run Tour
 
 Edit your identity files so the AI adapts to you.
 
@@ -34,7 +34,7 @@ Edit your identity files so the AI adapts to you.
 
 Use the AI to understand files and save your work with git.
 
-**Skills**: /GitHelp, /GenerateOutline
+**Skills**: /GitHelp
 
 > **Privacy tip**: Your `steering/` files contain personal info (name, goals). If you push to a public repository, this becomes visible. Consider keeping your fork private or reviewing these files before pushing.
 
@@ -48,15 +48,15 @@ Use the AI to understand files and save your work with git.
 
 Go from "I want to build X" to a working project.
 
-**Skills**: /Kickstart, /FixIt, /RewriteAsTweet
+**Skills**: /Kickstart, /FixIt
 
 - [ ] Used /Kickstart to plan a project from an idea
 - [ ] Built at least one working project with files you created
-- [ ] Used /FixIt to recover from a problem or /RewriteAsTweet to share your work
+- [ ] Used /FixIt to recover from a problem
 
 ---
 
-## Level 5: Steer — Control AI behavior with files
+## Level 5: Author — Write custom rules, skills, and agents
 
 You already edited Identity.md to change how the AI talks to you. Now write custom rules, skills, and tune agents.
 
@@ -74,9 +74,9 @@ A skill tells the AI what to do. An agent tells the AI who to be — a character
 
 Install optional forge modules to give your AI new capabilities.
 
-- [ ] Browsed available modules at github.com/N4M3Z
-- [ ] Installed a module into modules/ and asked your AI to set it up
-- [ ] Used a skill from the installed module
+- [ ] Installed forge-text: `git clone https://github.com/N4M3Z/forge-text.git modules/forge-text`
+- [ ] Ran `make install` in forge-text and used a skill from it
+- [ ] Installed a second module (try forge-council, forge-avatar, or forge-steering)
 
 ---
 

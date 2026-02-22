@@ -1,4 +1,0 @@
-sources: []
-
-claude:
-    argument-hint: "[file path] [options: --strip-frontmatter, --engine=typst|xelatex|pdflatex]"
