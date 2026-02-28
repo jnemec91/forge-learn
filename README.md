@@ -80,21 +80,22 @@ This creates a `forge-learn` directory on your computer and moves into it.
 
 > **Don't have Git?** Mac: type `git --version` in Terminal and macOS will prompt you to install it. Windows: download from [git-scm.com](https://git-scm.com/downloads/win).
 
-### 3. Make it yours
+### 3. Set up
 
-Open `steering/Identity.md` in any text editor (VS Code, Notepad, TextEdit — anything). Change `Your Name` to your actual name and save the file.
-
-### 4. Start your AI tool
-
-From inside the `forge-learn` directory:
+**Let your AI do it** (recommended): Start Claude Code and ask it to follow [INSTALL.md](INSTALL.md) — it checks prerequisites, personalizes your identity files, deploys skills, and runs `/Tour`.
 
 ```bash
 claude
+# then tell it: "Set up forge-learn for me. Follow INSTALL.md."
 ```
 
-### 5. Type `/Tour`
+**Or do it yourself:**
 
-Your AI will introduce itself and show you what's available.
+1. Open `steering/Identity.md` in any text editor — change `Your Name` to your actual name and save
+2. Open `steering/Goals.md` — replace the example goals with yours
+3. Run `make install` to deploy agents and skills to all providers
+4. Start Claude Code: `claude`
+5. Type `/Tour`
 
 That's it. You're set up.
 
@@ -153,7 +154,7 @@ Once you're comfortable, expand your setup with optional modules:
 | [forge-avatar](https://github.com/N4M3Z/forge-avatar) | Deep identity — digital avatar, beliefs, strategies, communication preferences |
 | [forge-steering](https://github.com/N4M3Z/forge-steering) | Behavioral rules — teach your AI what to do and what to avoid |
 
-Clone a module into `modules/` and ask your AI to help set it up. For automated module management, see [forge-core](https://github.com/N4M3Z/forge-core).
+Clone a module into `modules/` and ask your AI to help set it up. For automated module management, see [forge-user](https://github.com/N4M3Z/forge-user).
 
 ## Requirements
 

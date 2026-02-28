@@ -1,6 +1,6 @@
 # Install
 
-Instructions for the AI agent. When the user asks to set up forge-learn or troubleshoot their installation, follow these steps.
+> **This file is for AI agents.** The user's README tells them to point you here. When the user asks to set up forge-learn or troubleshoot their installation, follow these steps.
 
 ## Prerequisites Check
 
@@ -50,7 +50,7 @@ When the user wants to install a module from `modules/`:
 3. forge-learn's `plugin.json` only discovers skills from `./skills` — module skills are NOT auto-discovered. If the module has skills the user wants available as slash commands, explain that they need to either:
    - Run the module as a separate Claude Code plugin
    - Copy specific skills into `skills/` (not recommended — breaks updates)
-   - Upgrade to [forge-core](https://github.com/N4M3Z/forge-core) for automated module dispatch
+   - Upgrade to [forge-user](https://github.com/N4M3Z/forge-user) for automated module dispatch
 
 ## Recommended Modules
 
@@ -61,9 +61,9 @@ When the user wants to install a module from `modules/`:
 | [forge-avatar](https://github.com/N4M3Z/forge-avatar) | Deep identity — digital avatar, beliefs, strategies, communication preferences |
 | [forge-steering](https://github.com/N4M3Z/forge-steering) | Behavioral rules — teach your AI what to do and what to avoid |
 
-## Upgrading to forge-core
+## Upgrading to forge-user
 
-If the user outgrows forge-learn (wants hooks, automated dispatching, Rust-powered tools, multi-vault support), point them to [forge-core](https://github.com/N4M3Z/forge-core). Their steering files and skills are compatible — migration doesn't require starting over.
+If the user outgrows forge-learn (wants hooks, automated dispatching, Rust-powered tools, multi-vault support), point them to [forge-user](https://github.com/N4M3Z/forge-user). Their steering files and skills are compatible — migration doesn't require starting over.
 
 ## Platform Notes
 
