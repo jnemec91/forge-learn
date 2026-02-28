@@ -47,7 +47,7 @@ check-lib:
 	fi
 
 install: check-lib install-agents install-skills
-	@echo "Installation complete. Restart your session or reload agents/skills."
+	@echo "Installation complete (SCOPE=$(SCOPE)). Restart your session or reload agents/skills."
 
 clean: clean-agents clean-skills
 
